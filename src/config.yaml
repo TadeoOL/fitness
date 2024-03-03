@@ -1,6 +1,6 @@
 site:
   name: UrielCoach
-  site: 'https://astrowind.vercel.app'
+  site: 'https://urielcampa-fitness.netlify.app'
   base: '/'
   trailingSlash: false
 
@@ -11,14 +11,14 @@ metadata:
   title:
     default: UrielCoach
     template: '%s — UrielCoach'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: 'Fitness webpage.'
   robots:
     index: true
     follow: true
   openGraph:
     site_name: Uriel
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/logoUC.jpeg'
         width: 1200
         height: 628
     type: website
