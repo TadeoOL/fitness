@@ -7,6 +7,7 @@ import Features from '~/components/widgets/Features.astro';
 // import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 // import Content from '~/components/widgets/Content.astro';
+import Pricing from '~/components/widgets/Pricing.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -53,7 +54,7 @@ const metadata = {
         icon: 'tabler:barbell',
       },
       {
-        title: 'Programa de entramiento',
+        title: 'Programa de entrenamiento',
         description:
           'Con mi enfoque individualizado, recibirás un plan de ejercicios diseñado específicamente para tus metas y necesidades únicas.',
         icon: 'tabler:barbell',
@@ -86,8 +87,8 @@ const metadata = {
   />
 
   <!-- Content Widget **************** -->
-  <!-- 
-  <Content
+
+  <!-- <Content
     isReversed
     tagline="Inside template"
     title="AstroWind's Blueprint: Fun Meets Functionality!"
@@ -198,15 +199,58 @@ const metadata = {
     </Fragment>
   </Content> -->
 
+  <!-- Planes y precios -->
+
+  <Pricing
+    title="Planes personalizados"
+    prices={[
+      {
+        title: 'Plan de entrenamiento',
+        subtitle: 'Acceso a un plan de entrenamiento personalizado basado en tus necesidades.',
+        price: 499,
+        period: '/ Mes',
+        items: [
+          { description: 'Plan de entrenamiento' },
+          { description: 'Asesoría personalizada' },
+          { description: 'Plan de alimentación', icon: 'tabler:x' },
+        ],
+      },
+      {
+        title: 'Plan de alimentación',
+        subtitle: 'Acceso a un plan de alimentación personalizado basado en tus necesidades.',
+        price: 499,
+        period: '/ Mes',
+        items: [
+          { description: 'Plan de alimentación' },
+          { description: 'Asesoría personalizada' },
+          { description: 'Plan de entrenamiento', icon: 'tabler:x' },
+        ],
+        hasRibbon: true,
+        ribbonTitle: 'popular',
+      },
+      {
+        title: 'Plan completo',
+        subtitle: 'Acceso a un plan completo personalizado basado en tus necesidades y estilo de vida.',
+        price: 899,
+        period: '/ Mes',
+        items: [
+          { description: 'Plan de alimentación' },
+          { description: 'Asesoría personalizada' },
+          { description: 'Plan de entrenamiento' },
+        ],
+      },
+    ]}
+  />
+
   <!-- Steps Widget ****************** -->
 
   <Steps
     title="Comienza tu viaje hacia un estilo de vida más saludable en tan solo unos pasos."
     items={[
       {
-        title: 'Paso 1: <span class="font-medium">Contactactame</span>',
+        title: 'Paso 1: <span class="font-medium">Contáctame</span>',
         description:
-          '¡Haz clic en el botón de unete ahora y envíame un mensaje! Se te enviará un formulario para que lo completes con tus metas y necesidades.',
+          '¡Haz clic en el botón de únete ahora y envíame un mensaje! Se te enviará un formulario para que lo completes con tus metas y necesidades.',
         icon: 'tabler:message',
       },
       {
@@ -337,7 +381,7 @@ const metadata = {
       {
         title: '¿Qué te gustaría intentar de nuevo en tu entrenamiento personalizado?',
         description:
-          'Estoy aquí para ayudarte a explorar nuevas oportunidades y desafíos en tu viaje de fitness. Si hay algo que te gustaría intentar de nuevo o mejorar, estare encantado de ayudarte a alcanzar ese objetivo.',
+          'Estoy aquí para ayudarte a explorar nuevas oportunidades y desafíos en tu viaje de fitness. Si hay algo que te gustaría intentar de nuevo o mejorar, estaré encantado de ayudarte a alcanzar ese objetivo.',
       },
       {
         title: 'Si solo pudieras hacer una pregunta a cada persona que conoces, ¿cuál sería?',
