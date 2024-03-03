@@ -53,7 +53,7 @@ const {
                           ({ description, icon }) =>
                             description && (
                               <li class="mb-1.5 flex items-start space-x-3 leading-7">
-                                <div class="rounded-full bg-primary mt-1">
+                                <div class={icon ? 'rounded-full bg-red-600 mt-1' : 'rounded-full bg-primary mt-1'}>
                                   <Icon name={icon ? icon : 'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
                                 </div>
                                 <span>{description}</span>
@@ -68,7 +68,8 @@ const {
                       {typeof callToAction === 'string' ? (
                         <Fragment set:html={callToAction} />
                       ) : (
-                        callToAction && callToAction.href && <Button {...hasRibbon ? { variant:'primary' } : {}} {...callToAction}/>
+                        callToAction &&
+                        callToAction.href && <Button {...(hasRibbon ? { variant: 'primary' } : {})} {...callToAction} />
                       )}
                     </div>
                   )}
